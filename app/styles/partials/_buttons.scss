@@ -1,0 +1,19 @@
+.btn {
+  padding: 13px 26px 13px 26px;
+  text-transform: uppercase;
+  border-width: 0px;
+  border-radius: 0px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-primary {
+  background-color: #6892e8;
+
+  &:hover {
+    background-color: #6892e8;
+
+  }
+}

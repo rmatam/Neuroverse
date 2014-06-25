@@ -1,0 +1,16 @@
+body {
+  font-family: proxima-nova, sans-serif;
+}
+
+.body-landing {
+  background-color: black;
+  background-image: url("/images/backgrounds/backgroundLanding.png");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+
+  .nav-secondary {
+    height: auto;
+  }
+}
