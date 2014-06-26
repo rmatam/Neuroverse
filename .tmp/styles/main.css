@@ -4451,12 +4451,14 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+/*
 @font-face {
   font-family: 'proxima-nova';
   src: url('../fonts/Proxima-Nova-Regular-desktop.otf');
-  font-style: normal;
-  font-weight: 400; }
-
+  font-style:   normal;
+  font-weight:  400;
+}
+*/
 .btn {
   padding: 13px 26px 13px 26px;
   text-transform: uppercase;
@@ -4471,7 +4473,7 @@ button.close {
     background-color: #6892e8; }
 
 body {
-  font-family: proxima-nova, serif; }
+  font-family: proxima-nova, sans-serif; }
 
 .body-landing {
   background-color: #080f27;
