@@ -4,17 +4,26 @@
 }
 
 .section-hero {
-  padding-top: 50px;
+  padding-top: 25px;
+
+  &.absolute {
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+
+    @media (max-width: $screen-xs-max) {
+      position: relative;
+    }
+  }
 
   .logo {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     margin-left: 5px;
     height: 100px;
-    width: 644px;
     background-image: url("/images/logos/logoLarge.png");
-    background-position: center center;
+    background-position: bottom left;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 285px;
   }
 
   h1 {
@@ -30,12 +39,12 @@
     .logo {
       margin-left: 2px;
       height: 75px;
-      width: 465px;
+      background-size: 184px;
     }
 
     h1 {
-      font-size: 40px;
-      line-height: 18px;
+      font-size: 35px;
+      line-height: 12px;
     }
   }
 }
@@ -44,6 +53,8 @@
   margin-top: -150px;
   padding-top: 30px;
   padding-left: $nav-width + 30px;
+  width: 100%;
+  max-width: $nav-width + 630px;
 
   @media (max-width: $screen-sm-min) {
     margin-top: 0px;
@@ -52,12 +63,15 @@
 
   .logo {
     margin-bottom: 50px;
-    height: 106px;
-    width: 600px;
+    height: 86px;
     background-image: url("/images/logos/logoLargeDark.png");
-    background-position: center center;
+    background-position: bottom left;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 300px;
+
+    @media (max-width: $screen-xs-min) {
+      background-size: 250px;
+    }
   }
 
   h2 {
@@ -77,6 +91,10 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
+  }
+
+  img {
+    width: 100%;
   }
 
   hr {

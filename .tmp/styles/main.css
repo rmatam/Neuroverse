@@ -4451,6 +4451,12 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('../fonts/Proxima-Nova-Regular-desktop.otf');
+  font-style: normal;
+  font-weight: 400; }
+
 .btn {
   padding: 13px 26px 13px 26px;
   text-transform: uppercase;
@@ -4465,15 +4471,17 @@ button.close {
     background-color: #6892e8; }
 
 body {
-  font-family: proxima-nova, sans-serif; }
+  font-family: proxima-nova, serif; }
 
 .body-landing {
-  background-color: black;
+  background-color: #080f27;
   background-image: url("/images/backgrounds/backgroundLanding.png");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
   color: white; }
+  .body-landing .nav-primary button {
+    color: white; }
   .body-landing .nav-secondary {
     height: auto; }
 
@@ -4486,7 +4494,8 @@ body {
   border-radius: 0px; }
   .nav-primary button {
     text-transform: uppercase;
-    letter-spacing: 4px; }
+    letter-spacing: 4px;
+    color: #696977; }
   .nav-primary .navbar-collapse {
     margin-right: 0px;
     margin-left: 0px;
@@ -4561,16 +4570,22 @@ body {
   padding-bottom: 60px; }
 
 .section-hero {
-  padding-top: 50px; }
+  padding-top: 25px; }
+  .section-hero.absolute {
+    position: absolute;
+    bottom: 30px;
+    left: 0px; }
+    @media (max-width: 767px) {
+      .section-hero.absolute {
+        position: relative; } }
   .section-hero .logo {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     margin-left: 5px;
     height: 100px;
-    width: 644px;
     background-image: url("/images/logos/logoLarge.png");
-    background-position: center center;
+    background-position: bottom left;
     background-repeat: no-repeat;
-    background-size: 100%; }
+    background-size: 285px; }
   .section-hero h1 {
     color: #c3e3f9;
     font-size: 85px;
@@ -4582,27 +4597,31 @@ body {
     .section-hero .logo {
       margin-left: 2px;
       height: 75px;
-      width: 465px; }
+      background-size: 184px; }
     .section-hero h1 {
-      font-size: 40px;
-      line-height: 18px; } }
+      font-size: 35px;
+      line-height: 12px; } }
 
 .section-content {
   margin-top: -150px;
   padding-top: 30px;
-  padding-left: 330px; }
+  padding-left: 330px;
+  width: 100%;
+  max-width: 930px; }
   @media (max-width: 768px) {
     .section-content {
       margin-top: 0px;
       padding-left: 0px; } }
   .section-content .logo {
     margin-bottom: 50px;
-    height: 106px;
-    width: 600px;
+    height: 86px;
     background-image: url("/images/logos/logoLargeDark.png");
-    background-position: center center;
+    background-position: bottom left;
     background-repeat: no-repeat;
-    background-size: 100%; }
+    background-size: 300px; }
+    @media (max-width: 480px) {
+      .section-content .logo {
+        background-size: 250px; } }
   .section-content h2 {
     margin-bottom: 30px;
     font-size: 29px;
@@ -4618,6 +4637,8 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 300; }
+  .section-content img {
+    width: 100%; }
   .section-content hr {
     margin-top: 50px;
     margin-bottom: 50px; }
@@ -4625,10 +4646,14 @@ body {
 .container-fluid {
   padding-left: 30px;
   padding-right: 30px; }
+  @media (max-width: 767px) {
+    .container-fluid {
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .footer-primary {
   padding-top: 100px;
   padding-bottom: 75px;
   text-align: center;
   color: rgba(105, 105, 119, 0.3);
-  font-size: 16px; }
+  font-size: 14px; }
