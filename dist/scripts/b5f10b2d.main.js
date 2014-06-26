@@ -1,1 +1,0 @@
-"use strict";$(function(){var a=$("#nav-secondary-button"),b=$("#nav-secondary"),c=$("#nav-secondary li");a.click(function(){b.toggleClass("expand")}),c.each(function(a){$(c[a]).hasClass("active")&&b.addClass("expand")})});
