@@ -4487,48 +4487,47 @@ body {
   .body-landing .nav-secondary {
     height: auto; }
 
-.nav-primary {
-  position: relative;
-  z-index: 100;
-  text-transform: uppercase;
-  background: none;
-  border-width: 0px;
-  border-radius: 0px; }
-  .nav-primary button {
+.nav-primary ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px; }
+  .nav-primary ul li.active {
+    color: #2e6add; }
+  .nav-primary ul li a {
     text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #696977; }
-  .nav-primary .navbar-collapse {
-    margin-right: 0px;
-    margin-left: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 300px;
-    box-shadow: none; }
-  .nav-primary .nav {
-    float: none;
-    margin-right: 0px;
-    margin-left: 0px; }
-    .nav-primary .nav > li {
-      float: none; }
-      .nav-primary .nav > li.active > a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 13px;
+    font-weight: bold;
+    color: #696977;
+    letter-spacing: 4px; }
+    .nav-primary ul li a:hover {
+      color: #0c4393; }
+.nav-primary .nav {
+  float: none;
+  margin-right: 0px;
+  margin-left: 0px; }
+  .nav-primary .nav > li {
+    float: none; }
+    .nav-primary .nav > li.active > a {
+      background-color: transparent;
+      color: #2e6add; }
+    .nav-primary .nav > li > a {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+      font-size: 13px;
+      line-height: 13px;
+      font-weight: bold;
+      color: #696977;
+      letter-spacing: 4px; }
+      .nav-primary .nav > li > a:hover {
         background-color: transparent;
-        color: #2e6add; }
-      .nav-primary .nav > li > a {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding-top: 0px;
-        padding-bottom: 0px;
-        padding-left: 0px;
-        padding-right: 0px;
-        font-size: 13px;
-        line-height: 13px;
-        font-weight: bold;
-        color: #696977;
-        letter-spacing: 4px; }
-        .nav-primary .nav > li > a:hover {
-          background-color: transparent;
-          color: #0c4393; }
+        color: #0c4393; }
 
 .nav-secondary {
   box-sizing: border-box;

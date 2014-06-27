@@ -1,15 +1,15 @@
 'use strict';
 
 $( function () {
-    var navButton = $('#nav-secondary-button');
-    var navSecondary = $('#nav-secondary');
-    var navChildren = $('#nav-secondary li');
     var navPrimary = $("#nav-primary");
     var heroSection = $("#section-hero");
     var navPrimaryHeight = navPrimary.outerHeight();
     var heroSectionHeight = heroSection.outerHeight();
+    var navButton = $('#nav-secondary-button');
+    var navSecondary = $('#nav-secondary');
+    var navChildren = $('#nav-secondary li');
 
-    // Navigation bar
+    // Secondary Navigation bar
     navButton.click(function ()  {
         navSecondary.toggleClass('expand');
     });
