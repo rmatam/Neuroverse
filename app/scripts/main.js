@@ -1,16 +1,24 @@
 'use strict';
 
 $( function () {
-    var navButton = $('#nav-secondary-button');
-    var navSecondary = $('#nav-secondary');
-    var navChildren = $('#nav-secondary li');
     var navPrimary = $("#nav-primary");
     var heroSection = $("#section-hero");
     var navPrimaryHeight = navPrimary.outerHeight();
+    // console.log("Nav height: " + navPrimaryHeight);
     var heroSectionHeight = heroSection.outerHeight();
+    // console.log("Hero height: " + heroSectionHeight);
+    var navExpandButton = $('#button-expand');
+    var navSecondaryButton = $('#nav-secondary-button');
+    var navSecondary = $('#nav-secondary');
+    var navChildren = $('#nav-secondary li');
 
-    // Navigation bar
-    navButton.click(function ()  {
+    // Primary Navigation Bar
+    navExpandButton.click(function ()  {
+        navPrimary.toggleClass('expand');
+    });
+
+    // Secondary Navigation Bar
+    navSecondaryButton.click(function ()  {
         navSecondary.toggleClass('expand');
     });
 
@@ -21,8 +29,10 @@ $( function () {
         }
     });
 
-    // Landing page resizing
+    // Landing Page Resizing
     var setHeroPosition = function (windowHeight, navHeight, heroHeight) {
+        // console.log($( window ).height());
+
         if (windowHeight > navHeight + heroHeight) {
             heroSection.addClass("absolute");
         }
