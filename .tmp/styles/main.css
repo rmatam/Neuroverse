@@ -4472,113 +4472,147 @@ button.close {
   .btn-primary:hover {
     background-color: #6892e8; }
 
-body {
-  font-family: proxima-nova, sans-serif; }
+.button-expand {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  z-index: 150;
+  display: none;
+  height: 21px;
+  width: 30px;
+  border-width: 0px;
+  background: url("/images/icons/hamburgerDark.png") center center no-repeat; }
+  @media (max-width: 1199px) {
+    .button-expand {
+      display: block; } }
 
-.body-landing {
+body {
+  font-family: proxima-nova, sans-serif;
   background-color: #080f27;
   background-image: url("/images/backgrounds/backgroundLanding.png");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
-  color: white; }
-  .body-landing .nav-primary button {
-    color: white; }
-  .body-landing .nav-secondary {
-    height: auto; }
+  background-size: cover; }
 
-.nav-primary ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px; }
-  .nav-primary ul li.active {
-    color: #2e6add; }
-  .nav-primary ul li a {
-    text-transform: uppercase;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 13px;
-    line-height: 13px;
-    font-weight: bold;
-    color: #696977;
-    letter-spacing: 4px; }
-    .nav-primary ul li a:hover {
-      color: #0c4393; }
-.nav-primary .nav {
-  float: none;
-  margin-right: 0px;
-  margin-left: 0px; }
-  .nav-primary .nav > li {
-    float: none; }
-    .nav-primary .nav > li.active > a {
-      background-color: transparent;
+.body-landing {
+  color: white;
+  height: 100%;
+  width: 100%; }
+  .body-landing .nav-primary {
+    position: static;
+    padding-top: 30px;
+    padding-left: 30px; }
+    @media (max-width: 1199px) {
+      .body-landing .nav-primary {
+        position: absolute;
+        padding-top: 0px;
+        padding-left: 0px; } }
+    .body-landing .nav-primary .nav-secondary {
+      height: auto; }
+      .body-landing .nav-primary .nav-secondary ul {
+        position: static;
+        height: auto;
+        padding-left: 10px; }
+  .body-landing .section-wrapper {
+    background: transparent; }
+
+.nav-primary {
+  position: absolute;
+  z-index: 100;
+  left: 30px;
+  top: 30px;
+  width: 275px;
+  /*
+  -webkit-transition: width 2s;
+  transition: width 2s;
+  */ }
+  @media (max-width: 1199px) {
+    .nav-primary {
+      width: 0px;
+      overflow: hidden; } }
+  @media (max-width: 1199px) {
+    .nav-primary.expand {
+      overflow: visible;
+      top: 15px;
+      left: 15px;
+      position: relative;
+      z-index: 100;
+      width: 275px;
+      float: left; }
+      .nav-primary.expand:before {
+        content: " ";
+        position: absolute;
+        z-index: 0;
+        top: -15px;
+        right: 15px;
+        width: 100%;
+        height: 600%;
+        background: rgba(255, 255, 255, 0.1);
+        background: linear-gradient(rgba(255, 255, 255, 0.1), transparent); } }
+  .nav-primary ul {
+    position: relative;
+    z-index: 100;
+    width: 275px;
+    margin: 0px;
+    padding: 0px;
+    list-style: none; }
+    .nav-primary ul li.active a {
       color: #2e6add; }
-    .nav-primary .nav > li > a {
+    .nav-primary ul li a {
+      display: block;
+      text-transform: uppercase;
       margin-top: 10px;
       margin-bottom: 10px;
-      padding-top: 0px;
-      padding-bottom: 0px;
-      padding-left: 0px;
-      padding-right: 0px;
       font-size: 13px;
       line-height: 13px;
       font-weight: bold;
       color: #696977;
       letter-spacing: 4px; }
-      .nav-primary .nav > li > a:hover {
-        background-color: transparent;
-        color: #0c4393; }
+      .nav-primary ul li a:hover {
+        color: #0c4393;
+        text-decoration: none; }
 
 .nav-secondary {
-  box-sizing: border-box;
-  padding-top: 15px;
-  padding-left: 15px;
-  margin-top: -15px;
-  height: 0px;
-  overflow: visible;
+  position: relative;
   display: none; }
-  @media (max-width: 768px) {
-    .nav-secondary {
-      height: auto; } }
   .nav-secondary.expand {
     display: block; }
   .nav-secondary ul {
-    padding: 0px;
-    margin: 0px;
-    list-style: none; }
-  .nav-secondary li.active > a {
-    background-color: transparent;
-    color: #2e6add; }
-  .nav-secondary a {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    font-size: 13px;
-    line-height: 13px;
-    font-weight: bold;
-    color: #696977;
-    letter-spacing: 4px; }
-    .nav-secondary a:hover {
-      color: #0c4393;
-      text-decoration: none; }
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    height: 0px;
+    overflow: visible;
+    width: 250px; }
 
 .section-wrapper {
-  padding-top: 30px;
-  padding-bottom: 60px; }
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  padding: 30px 30px 60px 30px;
+  overflow-x: hidden;
+  background: white; }
+  @media (max-width: 767px) {
+    .section-wrapper {
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .section-hero {
-  padding-top: 25px; }
-  .section-hero.absolute {
+  display: block;
+  padding-top: 25px;
+  width: 100%;
+  min-width: 300px;
+  /*
+  &.absolute {
     position: absolute;
     bottom: 30px;
-    left: 0px; }
-    @media (max-width: 767px) {
-      .section-hero.absolute {
-        position: relative; } }
+    left: 30px;
+
+    @media (max-width: $screen-xs-max) {
+      position: relative;
+    }
+  }
+  */ }
   .section-hero .logo {
     margin-bottom: 25px;
     margin-left: 5px;
@@ -4593,6 +4627,7 @@ body {
     line-height: 50px;
     font-weight: 700;
     text-transform: uppercase;
+    white-space: nowrap;
     letter-spacing: 3px; }
   @media (max-width: 767px) {
     .section-hero .logo {
@@ -4604,11 +4639,12 @@ body {
       line-height: 12px; } }
 
 .section-content {
-  margin-top: -150px;
-  padding-top: 30px;
-  padding-left: 330px;
+  padding-top: 40px;
   width: 100%;
-  max-width: 930px; }
+  min-width: 300px;
+  max-width: 630px;
+  margin-right: auto;
+  margin-left: auto; }
   @media (max-width: 768px) {
     .section-content {
       margin-top: 0px;

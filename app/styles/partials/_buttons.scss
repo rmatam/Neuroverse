@@ -17,3 +17,19 @@
 
   }
 }
+
+.button-expand {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  z-index: 150;
+  display: none;
+  height: 21px;
+  width: 30px;
+  border-width: 0px;
+  background: url("/images/icons/hamburgerDark.png") center center no-repeat;
+
+  @media (max-width: $screen-md-max) {
+    display: block;
+  }
+}

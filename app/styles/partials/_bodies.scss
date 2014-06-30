@@ -1,23 +1,41 @@
 body {
   font-family: proxima-nova, sans-serif;
-}
 
-.body-landing {
   background-color: #080f27;
   background-image: url("/images/backgrounds/backgroundLanding.png");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.body-landing {
   color: white;
+  height: 100%;
+  width: 100%;
 
   .nav-primary {
+    position: static;
+    padding-top: 30px;
+    padding-left: 30px;
 
-    button {
-      color: white;
+    @media (max-width: $screen-md-max) {
+      position: absolute;
+      padding-top: 0px;
+      padding-left: 0px;
+    }
+
+    .nav-secondary {
+      height: auto;
+
+      ul {
+        position: static;
+        height: auto;
+        padding-left: 10px;
+      }
     }
   }
 
-  .nav-secondary {
-    height: auto;
+  .section-wrapper {
+    background: transparent;
   }
 }
