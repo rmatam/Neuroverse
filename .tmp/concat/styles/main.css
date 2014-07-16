@@ -4453,18 +4453,18 @@ button.close {
 
 @font-face {
   font-family: 'proxima-nova';
-  src: url('../fonts/proxima-nova-bold.eot');
+  src: url('/images/fonts/proxima-nova-bold.eot');
   /* IE9 Compat Modes */
-  src: url('../fonts/proxima-nova-bold.eot#iefix') format('embedded-opentype'), url('../fonts/proxima-nova-bold.woff') format('woff'), url('../fonts/proxima-nova-bold.ttf') format('truetype'), url('../fonts/proxima-nova-bold.svg') format('svg');
+  src: url('/images/fonts/proxima-nova-bold.eot#iefix') format('embedded-opentype'), url('/images/fonts/proxima-nova-bold.woff') format('woff'), url('/images/fonts/proxima-nova-bold.ttf') format('truetype'), url('/images/fonts/proxima-nova-bold.svg') format('svg');
   /* Legacy iOS */
   font-style: bold;
   font-weight: 700; }
 
 @font-face {
   font-family: 'proxima-nova';
-  src: url('../fonts/proxima-nova-regular.eot');
+  src: url('/images/fonts/proxima-nova-regular.eot');
   /* IE9 Compat Modes */
-  src: url('../fonts/proxima-nova-regular.eot#iefix') format('embedded-opentype'), url('../fonts/proxima-nova-regular.woff') format('woff'), url('../fonts/proxima-nova-regular.ttf') format('truetype'), url('../fonts/proxima-nova-regular.svg') format('svg');
+  src: url('/images/fonts/proxima-nova-regular.eot#iefix') format('embedded-opentype'), url('/images/fonts/proxima-nova-regular.woff') format('woff'), url('/images/fonts/proxima-nova-regular.ttf') format('truetype'), url('/images/fonts/proxima-nova-regular.svg') format('svg');
   /* Legacy iOS */
   font-style: normal;
   font-weight: 400; }
