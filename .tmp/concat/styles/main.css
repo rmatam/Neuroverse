@@ -4451,14 +4451,24 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-/*
 @font-face {
   font-family: 'proxima-nova';
-  src: url('../fonts/Proxima-Nova-Regular-desktop.otf');
-  font-style:   normal;
-  font-weight:  400;
-}
-*/
+  src: url('../fonts/proxima-nova-bold.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/proxima-nova-bold.eot#iefix') format('embedded-opentype'), url('../fonts/proxima-nova-bold.woff') format('woff'), url('../fonts/proxima-nova-bold.ttf') format('truetype'), url('../fonts/proxima-nova-bold.svg') format('svg');
+  /* Legacy iOS */
+  font-style: bold;
+  font-weight: 700; }
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('../fonts/proxima-nova-regular.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/proxima-nova-regular.eot#iefix') format('embedded-opentype'), url('../fonts/proxima-nova-regular.woff') format('woff'), url('../fonts/proxima-nova-regular.ttf') format('truetype'), url('../fonts/proxima-nova-regular.svg') format('svg');
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 400; }
+
 .btn {
   padding: 13px 26px 13px 26px;
   text-transform: uppercase;
@@ -4494,57 +4504,50 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
-.body-landing {
-  color: white;
-  height: 100%;
-  width: 100%; }
-  .body-landing .nav-primary {
-    position: static;
-    padding-top: 30px;
-    padding-left: 30px; }
-    @media (max-width: 1199px) {
-      .body-landing .nav-primary {
-        position: absolute;
-        padding-top: 0px;
-        padding-left: 0px; } }
-    .body-landing .nav-primary .nav-secondary {
-      height: auto; }
-      .body-landing .nav-primary .nav-secondary ul {
-        position: static;
-        height: auto;
-        padding-left: 10px; }
-  .body-landing .section-wrapper {
-    background: transparent; }
+.body-landing .nav-primary {
+  position: static;
+  padding-top: 30px;
+  padding-left: 30px; }
+  @media (max-width: 1199px) {
+    .body-landing .nav-primary {
+      position: absolute;
+      padding-top: 0px;
+      padding-left: 0px; } }
+  .body-landing .nav-primary .nav-secondary {
+    height: auto; }
+    .body-landing .nav-primary .nav-secondary ul {
+      position: static;
+      height: auto;
+      padding-left: 10px; }
+.body-landing .section-wrapper {
+  background: transparent; }
+  @media (max-width: 1199px) {
+    .body-landing .section-wrapper.darken:after {
+      background: transparent; } }
 
 .nav-primary {
   position: absolute;
   z-index: 100;
   left: 30px;
   top: 30px;
-  width: 275px;
-  /*
-  -webkit-transition: width 2s;
-  transition: width 2s;
-  */ }
+  width: 250px; }
   @media (max-width: 1199px) {
     .nav-primary {
+      top: 0px;
+      left: 0px;
       width: 0px;
       overflow: hidden; } }
   @media (max-width: 1199px) {
     .nav-primary.expand {
       overflow: visible;
-      top: 15px;
-      left: 15px;
       position: relative;
       z-index: 100;
-      width: 275px;
+      width: 250px;
       float: left; }
       .nav-primary.expand:before {
         content: " ";
         position: absolute;
         z-index: 0;
-        top: -15px;
-        right: 15px;
         width: 100%;
         height: 600%;
         background: rgba(255, 255, 255, 0.1);
@@ -4552,10 +4555,13 @@ body {
   .nav-primary ul {
     position: relative;
     z-index: 100;
-    width: 275px;
+    width: 250px;
     margin: 0px;
     padding: 0px;
     list-style: none; }
+    @media (max-width: 1199px) {
+      .nav-primary ul {
+        padding: 15px 15px 0px 15px; } }
     .nav-primary ul li.active a {
       color: #2e6add; }
     .nav-primary ul li a {
@@ -4580,7 +4586,10 @@ body {
   .nav-secondary ul {
     position: absolute;
     top: 0px;
-    left: 10px;
+    left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 30px;
     height: 0px;
     overflow: visible;
     width: 250px; }
@@ -4596,6 +4605,15 @@ body {
     .section-wrapper {
       padding-left: 15px;
       padding-right: 15px; } }
+  @media (max-width: 1199px) {
+    .section-wrapper.darken:after {
+      content: " ";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background: rgba(128, 128, 128, 0.35); } }
 
 .section-hero {
   display: block;

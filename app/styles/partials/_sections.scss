@@ -9,6 +9,22 @@
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  &.darken {
+
+    @media (max-width: $screen-md-max) {
+
+      &:after {
+        content: " ";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        background: rgba(128, 128, 128, 0.35);
+      }
+    }
+  }
 }
 
 .section-hero {

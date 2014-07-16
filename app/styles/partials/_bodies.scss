@@ -9,9 +9,6 @@ body {
 }
 
 .body-landing {
-  color: white;
-  height: 100%;
-  width: 100%;
 
   .nav-primary {
     position: static;
@@ -37,5 +34,15 @@ body {
 
   .section-wrapper {
     background: transparent;
+
+    &.darken {
+
+      @media (max-width: $screen-md-max) {
+
+        &:after {
+          background: transparent;
+        }
+      }
+    }
   }
 }

@@ -1,6 +1,7 @@
 'use strict';
 
 $( function () {
+    var sectionWrapper = $("#section-wrapper");
     var navPrimary = $("#nav-primary");
     var heroSection = $("#section-hero");
     var navPrimaryHeight = navPrimary.outerHeight();
@@ -15,6 +16,7 @@ $( function () {
     // Primary Navigation Bar
     navExpandButton.click(function ()  {
         navPrimary.toggleClass('expand');
+        sectionWrapper.toggleClass('darken');
     });
 
     // Secondary Navigation Bar
