@@ -124,6 +124,14 @@
     font-weight: 300;
   }
 
+  a {
+    color: #2e6add;
+
+    &:hover {
+      color: #0c4393;
+    }
+  }
+
   img {
     width: 100%;
   }

@@ -10,6 +10,7 @@ $( function () {
     // console.log("Hero height: " + heroSectionHeight);
     var navExpandButton = $('#button-expand');
     var navSecondaryButton = $('#nav-secondary-button');
+    var navSecondaryStatus = $('#nav-status');
     var navSecondary = $('#nav-secondary');
     var navChildren = $('#nav-secondary li');
 
@@ -22,12 +23,19 @@ $( function () {
     // Secondary Navigation Bar
     navSecondaryButton.click(function ()  {
         navSecondary.toggleClass('expand');
+
+        if (navSecondary.hasClass('expand')) {
+            navSecondaryStatus.text('-');
+        }
+        else {
+            navSecondaryStatus.text('+');
+        }
     });
 
     navChildren.each(function (index) {
         if ($(navChildren[index]).hasClass('active'))
         {
-            navSecondary.addClass('expand');
+            navSecondaryButton.click();
         }
     });
 

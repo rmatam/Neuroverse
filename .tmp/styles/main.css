@@ -4469,6 +4469,10 @@ button.close {
   font-style: normal;
   font-weight: 400; }
 
+.map-google {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
 .btn {
   padding: 13px 26px 13px 26px;
   text-transform: uppercase;
@@ -4478,6 +4482,7 @@ button.close {
     opacity: 0.8; }
 
 .btn-primary {
+  color: white !important;
   background-color: #6892e8; }
   .btn-primary:hover {
     background-color: #6892e8; }
@@ -4495,6 +4500,8 @@ button.close {
   @media (max-width: 1199px) {
     .button-expand {
       display: block; } }
+  .button-expand:focus {
+    outline-width: 0px; }
 
 body {
   font-family: proxima-nova, sans-serif;
@@ -4692,6 +4699,10 @@ body {
     font-size: 16px;
     font-style: normal;
     font-weight: 300; }
+  .section-content a {
+    color: #2e6add; }
+    .section-content a:hover {
+      color: #0c4393; }
   .section-content img {
     width: 100%; }
   .section-content hr {
@@ -4709,6 +4720,5 @@ body {
 .footer-primary {
   padding-top: 100px;
   padding-bottom: 75px;
-  text-align: center;
   color: rgba(105, 105, 119, 0.3);
   font-size: 14px; }
