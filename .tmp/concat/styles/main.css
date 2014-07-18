@@ -4462,12 +4462,30 @@ button.close {
 
 @font-face {
   font-family: 'proxima-nova';
+  src: url('/styles/fonts/proxima-nova-semibold.eot');
+  /* IE9 Compat Modes */
+  src: url('/styles/fonts/proxima-nova-semibold.eot#iefix') format('embedded-opentype'), url('/styles/fonts/proxima-nova-semibold.woff') format('woff'), url('/styles/fonts/proxima-nova-semibold.ttf') format('truetype'), url('/styles/fonts/proxima-nova-semibold.svg') format('svg');
+  /* Legacy iOS */
+  font-style: semibold;
+  font-weight: 600; }
+
+@font-face {
+  font-family: 'proxima-nova';
   src: url('/styles/fonts/proxima-nova-regular.eot');
   /* IE9 Compat Modes */
   src: url('/styles/fonts/proxima-nova-regular.eot#iefix') format('embedded-opentype'), url('/styles/fonts/proxima-nova-regular.woff') format('woff'), url('/styles/fonts/proxima-nova-regular.ttf') format('truetype'), url('/styles/fonts/proxima-nova-regular.svg') format('svg');
   /* Legacy iOS */
   font-style: normal;
   font-weight: 400; }
+
+@font-face {
+  font-family: 'proxima-nova';
+  src: url('/styles/fonts/proxima-nova-light.eot');
+  /* IE9 Compat Modes */
+  src: url('/styles/fonts/proxima-nova-light.eot#iefix') format('embedded-opentype'), url('/styles/fonts/proxima-nova-light.woff') format('woff'), url('/styles/fonts/proxima-nova-light.ttf') format('truetype'), url('/styles/fonts/proxima-nova-light.svg') format('svg');
+  /* Legacy iOS */
+  font-style: light;
+  font-weight: 300; }
 
 .map-google {
   margin-top: 30px;
@@ -4578,7 +4596,7 @@ body {
       margin-bottom: 10px;
       font-size: 13px;
       line-height: 13px;
-      font-weight: bold;
+      font-weight: 600;
       color: #696977;
       letter-spacing: 4px; }
       .nav-primary ul li a:hover {
@@ -4680,11 +4698,11 @@ body {
     color: #696977;
     font-weight: 300;
     font-style: normal;
-    line-height: 32px; }
+    line-height: 1.2em; }
   .section-content p {
     margin-top: 16px;
     margin-bottom: 16px;
-    line-height: 32px;
+    line-height: 1.7em;
     color: #696977;
     font-size: 16px;
     font-style: normal;
