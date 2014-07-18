@@ -1,8 +1,10 @@
 'use strict';
 
 $( function () {
+    var body = $("body");
     var sectionWrapper = $("#section-wrapper");
     var navPrimary = $("#nav-primary");
+    var navPrimaryExpand = false;
     var heroSection = $("#section-hero");
     var navPrimaryHeight = navPrimary.outerHeight();
     // console.log("Nav height: " + navPrimaryHeight);
@@ -18,6 +20,17 @@ $( function () {
     navExpandButton.click(function ()  {
         navPrimary.toggleClass('expand');
         sectionWrapper.toggleClass('darken');
+
+        if (navPrimary.hasClass('expand'))
+        {
+            navPrimaryExpand = true;
+        }
+        else
+        {
+            navPrimaryExpand = false;
+        }
+
+        setHeroPosition($( window ).height(), navPrimaryHeight, heroSectionHeight);
     });
 
     // Secondary Navigation Bar
@@ -42,12 +55,19 @@ $( function () {
     // Landing Page Resizing
     var setHeroPosition = function (windowHeight, navHeight, heroHeight) {
         // console.log($( window ).height());
+        var heroLeft = "30px";
+
+        if (navPrimaryExpand) {
+            var heroLeft = "260px";
+        }
 
         if (windowHeight > navHeight + heroHeight) {
-            heroSection.addClass("absolute");
-        }
-        else {
-            heroSection.removeClass("absolute");
+            var styles = {
+                position: 'absolute',
+                bottom: '30px',
+                left: heroLeft
+            }
+            heroSection.css( styles );
         }
     }
 

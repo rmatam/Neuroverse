@@ -29,21 +29,14 @@
 
 .section-hero {
   display: block;
-  padding-top: 25px;
   width: 100%;
   min-width: 300px;
 
-  /*
   &.absolute {
     position: absolute;
     bottom: 30px;
     left: 30px;
-
-    @media (max-width: $screen-xs-max) {
-      position: relative;
-    }
   }
-  */
 
   .logo {
     margin-bottom: 25px;
@@ -81,15 +74,13 @@
 
 .section-content {
   padding-top: 40px;
-  width: 100%;
-  min-width: 300px;
-  max-width: 630px;
+  width: 55%;
+  max-width: 800px;
   margin-right: auto;
   margin-left: auto;
 
-  @media (max-width: $screen-sm-min) {
-    margin-top: 0px;
-    padding-left: 0px;
+  @media (max-width: $screen-md-max) {
+    width: 100%;
   }
 
   .logo {

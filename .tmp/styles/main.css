@@ -4624,20 +4624,12 @@ body {
 
 .section-hero {
   display: block;
-  padding-top: 25px;
   width: 100%;
-  min-width: 300px;
-  /*
-  &.absolute {
+  min-width: 300px; }
+  .section-hero.absolute {
     position: absolute;
     bottom: 30px;
-    left: 30px;
-
-    @media (max-width: $screen-xs-max) {
-      position: relative;
-    }
-  }
-  */ }
+    left: 30px; }
   .section-hero .logo {
     margin-bottom: 25px;
     margin-left: 5px;
@@ -4665,15 +4657,13 @@ body {
 
 .section-content {
   padding-top: 40px;
-  width: 100%;
-  min-width: 300px;
-  max-width: 630px;
+  width: 55%;
+  max-width: 800px;
   margin-right: auto;
   margin-left: auto; }
-  @media (max-width: 768px) {
+  @media (max-width: 1199px) {
     .section-content {
-      margin-top: 0px;
-      padding-left: 0px; } }
+      width: 100%; } }
   .section-content .logo {
     margin-bottom: 50px;
     height: 86px;
