@@ -4529,30 +4529,26 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
-.body-landing {
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-  .body-landing .nav-primary {
-    position: static;
-    padding-top: 30px;
-    padding-left: 30px; }
-    @media (max-width: 1199px) {
-      .body-landing .nav-primary {
-        position: absolute;
-        padding-top: 0px;
-        padding-left: 0px; } }
-    .body-landing .nav-primary .nav-secondary {
-      height: auto; }
-      .body-landing .nav-primary .nav-secondary ul {
-        position: static;
-        height: auto;
-        padding-left: 10px; }
-  .body-landing .section-wrapper {
-    background: transparent; }
-    @media (max-width: 1199px) {
-      .body-landing .section-wrapper.darken:after {
-        background: transparent; } }
+.body-landing .nav-primary {
+  position: static;
+  padding-top: 30px;
+  padding-left: 30px; }
+  @media (max-width: 1199px) {
+    .body-landing .nav-primary {
+      position: absolute;
+      padding-top: 0px;
+      padding-left: 0px; } }
+  .body-landing .nav-primary .nav-secondary {
+    height: auto; }
+    .body-landing .nav-primary .nav-secondary ul {
+      position: static;
+      height: auto;
+      padding-left: 10px; }
+.body-landing .section-wrapper {
+  background: transparent; }
+  @media (max-width: 1199px) {
+    .body-landing .section-wrapper.darken:after {
+      background: transparent; } }
 
 .nav-primary {
   position: absolute;
