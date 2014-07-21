@@ -52,6 +52,14 @@ $( function () {
         }
     });
 
+    // Wrapper Min Height
+    var setWrapperMinHeight = function (windowHeight) {
+        if (!body.hasClass("body-landing"))
+        {
+            sectionWrapper.css("min-height", windowHeight + "px");
+        }
+    }
+
     // Landing Page Resizing
     var setHeroPosition = function (windowHeight, navHeight, heroHeight) {
         // console.log($( window ).height());
@@ -72,8 +80,10 @@ $( function () {
     }
 
     setHeroPosition($( window ).height(), navPrimaryHeight, heroSectionHeight);
+    setWrapperMinHeight($( window ).height());
 
     $( window ).resize(function () {
         setHeroPosition($( window ).height(), navPrimaryHeight, heroSectionHeight);
+        setWrapperMinHeight($( window ).height());
     });
 });
