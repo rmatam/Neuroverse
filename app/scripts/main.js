@@ -52,6 +52,11 @@ $( function () {
         }
     });
 
+    // Body Min Height
+    var setBodyMinHeight = function (windowHeight) {
+        body.css("min-height", windowHeight + "px");
+    }
+
     // Wrapper Min Height
     var setWrapperMinHeight = function (windowHeight) {
         if (!body.hasClass("body-landing"))
@@ -81,9 +86,11 @@ $( function () {
 
     setHeroPosition($( window ).height(), navPrimaryHeight, heroSectionHeight);
     setWrapperMinHeight($( window ).height());
+    setBodyMinHeight($( window ).height());
 
     $( window ).resize(function () {
         setHeroPosition($( window ).height(), navPrimaryHeight, heroSectionHeight);
         setWrapperMinHeight($( window ).height());
+        setBodyMinHeight($( window ).height());
     });
 });
