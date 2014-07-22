@@ -28,15 +28,6 @@
 }
 
 .section-hero {
-  display: block;
-  width: 100%;
-  min-width: 300px;
-
-  &.absolute {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-  }
 
   .logo {
     margin-bottom: 25px;
@@ -81,6 +72,7 @@
 
   @media (max-width: $screen-md-max) {
     width: 100%;
+    min-width: 200px;
   }
 
   .logo {
