@@ -69,6 +69,7 @@ $( function () {
     var setHeroPosition = function (windowHeight, navHeight, heroHeight) {
         // console.log($( window ).height());
         var heroLeft = "30px";
+        var maxWidth = sectionWrapper.outerWidth() - 10;
 
         if (navPrimaryExpand) {
             var heroLeft = "260px";
@@ -78,7 +79,9 @@ $( function () {
             var styles = {
                 position: 'absolute',
                 bottom: '30px',
-                left: heroLeft
+                left: heroLeft,
+                "max-width": maxWidth,
+                overflow: 'hidden'
             }
             heroSection.css( styles );
         }
