@@ -75,16 +75,15 @@ $( function () {
             var heroLeft = "260px";
         }
 
-        if (windowHeight > navHeight + heroHeight) {
-            var styles = {
-                position: 'absolute',
-                bottom: '30px',
-                left: heroLeft,
-                "max-width": maxWidth,
-                overflow: 'hidden'
-            }
-            heroSection.css( styles );
+        var styles = {
+            position: 'absolute',
+            bottom: '30px',
+            left: heroLeft,
+            "max-width": maxWidth,
+            overflow: 'hidden'
         }
+        
+        heroSection.css( styles );
     }
 
     setHeroPosition($( window ).height(), navPrimaryHeight, heroSectionHeight);
