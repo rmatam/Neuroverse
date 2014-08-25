@@ -67,17 +67,24 @@ $( function () {
 
     // Landing Page Resizing
     var setHeroPosition = function (windowHeight, navHeight, heroHeight) {
-        // console.log($( window ).height());
         var heroLeft = "30px";
+        var heroBottom = "30px";
+        var heroTop = "auto";
         var maxWidth = sectionWrapper.outerWidth() - 10;
 
         if (navPrimaryExpand) {
             var heroLeft = "260px";
         }
 
+        if (sectionWrapper.outerHeight() + heroSection.outerHeight() > $( window ).height()) {
+            heroTop = sectionWrapper.outerHeight();
+            heroBottom = "auto";
+        }
+
         var styles = {
             position: 'absolute',
-            bottom: '30px',
+            top: heroTop,
+            bottom: heroBottom,
             left: heroLeft,
             "max-width": maxWidth,
             overflow: 'hidden'
