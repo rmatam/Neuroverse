@@ -77,7 +77,7 @@ $( function () {
         }
 
         if (sectionWrapper.outerHeight() + heroSection.outerHeight() > $( window ).height()) {
-            heroTop = sectionWrapper.outerHeight();
+            heroTop = sectionWrapper.outerHeight() - 30;
             heroBottom = "auto";
         }
 
