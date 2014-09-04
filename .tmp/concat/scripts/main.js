@@ -7,9 +7,7 @@ $( function () {
     var navPrimaryExpand = false;
     var heroSection = $("#section-hero");
     var navPrimaryHeight = navPrimary.outerHeight();
-    // console.log("Nav height: " + navPrimaryHeight);
     var heroSectionHeight = heroSection.outerHeight();
-    // console.log("Hero height: " + heroSectionHeight);
     var navExpandButton = $('#button-expand');
     var navSecondaryButton = $('#nav-secondary-button');
     var navSecondaryStatus = $('#nav-status');
@@ -30,7 +28,7 @@ $( function () {
             navPrimaryExpand = false;
         }
 
-        setHeroPosition($( window ).height(), navPrimaryHeight, heroSectionHeight);
+        setHeroPosition();
     });
 
     // Secondary Navigation Bar
@@ -66,14 +64,19 @@ $( function () {
     }
 
     // Landing Page Resizing
-    var setHeroPosition = function (windowHeight, navHeight, heroHeight) {
+    var setHeroPosition = function () {
         var heroLeft = "30px";
         var heroBottom = "30px";
         var heroTop = "auto";
         var maxWidth = sectionWrapper.outerWidth() - 10;
+        var windowWidth = $( window ).width();
+
+        if (windowWidth < 1200 ) {
+            heroLeft = "15px";
+        }
 
         if (navPrimaryExpand) {
-            var heroLeft = "260px";
+            heroLeft = "264px";
         }
 
         if (sectionWrapper.outerHeight() + heroSection.outerHeight() > $( window ).height()) {
@@ -93,7 +96,7 @@ $( function () {
         heroSection.css( styles );
     }
 
-    setHeroPosition($( window ).height(), navPrimaryHeight, heroSectionHeight);
+    setHeroPosition();
     setWrapperMinHeight($( window ).height());
     setBodyMinHeight($( window ).height());
 
